@@ -243,6 +243,11 @@
             Add a cookie prior to connecting to the server.
             </summary>
         </member>
+        <member name="M:WatsonWebsocket.WatsonWsClient.SetHeader(System.String,System.String)">
+            <summary>
+            Set custom header, must call before start.
+            </summary>
+        </member>
         <member name="M:WatsonWebsocket.WatsonWsClient.Start">
             <summary>
             Start the client and connect to the server.

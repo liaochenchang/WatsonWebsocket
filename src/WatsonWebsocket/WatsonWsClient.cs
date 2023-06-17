@@ -230,6 +230,21 @@ namespace WatsonWebsocket
         }
 
         /// <summary>
+        /// Set custom header, must call before start.
+        /// </summary>
+
+        public void SetHeader(string headerName, string headerValue)
+        {
+            if (_ClientWs == null)
+                return;
+
+            if (!_IsBrowser)
+            {
+                _ClientWs.Options.SetRequestHeader(headerName, headerValue);
+            }
+        }
+
+        /// <summary>
         /// Start the client and connect to the server.
         /// </summary>
         public void Start()
